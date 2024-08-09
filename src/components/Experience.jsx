@@ -3,6 +3,9 @@ import React from "react";
 function Experience() {
   return (
     <div className="min-h-[100vh] pt-[100px] pb-[100px] pr-[15px] pl-[15px] text-white">
+      <div className="md:text-5xl text-4xl font-bold md:mt-16 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 ">
+        Experience
+      </div>
       <div className="max-w-[1000px] m-auto flex flex-wrap relative">
         <div className="absolute w-[2px] h-[100%] bg-white sm:left-[calc(50%-1px)] left-[7px] mt-5"></div>
         {/* item1 */}
@@ -35,29 +38,6 @@ function Experience() {
             25 Juni 2024 - 24 Juli 2035
           </div>
           <div className="sm:w-full w-[90%] sm:ml-0 ml-8 h-full p-[30px] mt-16 sm:mt-0 rounded-3xl  bg-gradient-to-b from-slate-300/10 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-4xl   ">
-            <h2 className="text-2xl font-semibold">Web Developer Intern </h2>
-            <h2 className="text-lg font-thin mb-4">
-              Dinas Kearsipan dan Perpustakaan Kabupaten Purbalingga
-            </h2>
-            <ul className="list-decimal ml-4">
-              <li>
-                Revamped the official government website's design and UI,
-                implementing improvements and features to enhance user
-                experience and functionality, improving user engagement by 20%.
-              </li>
-              <li>
-                Conducted testing on the Inlislite application based on Yii 2
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="relative w-[100%] mb-[40px] pl-[calc(50%+30px)]">
-          <div className="dot absolute bg-white h-[16px] w-[16px] rounded-full left-[calc(50%-8px)] "></div>
-          <div className="w-full h-full pl-10 pt-6 pb-8 pr-4 rounded-3xl  bg-gradient-to-b from-slate-300/10 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-4xl mt-10 sm:mt-0 sm:mr-0 mr-8 ">
-            <div className="inline-block mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
-              25 Juni 2024 - 24 Juli 2035
-            </div>
             <h2 className="text-2xl font-semibold">Web Developer Intern </h2>
             <h2 className="text-lg font-thin mb-4">
               Dinas Kearsipan dan Perpustakaan Kabupaten Purbalingga

@@ -2,6 +2,7 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import profilepic from "../assets/profilepic.png";
 import circle from "../assets/circle.png";
+import { HERO_CONTENT } from "../constants";
 
 function Hero() {
   return (
@@ -21,8 +22,7 @@ function Hero() {
         </p>
 
         <span className="text-neutral-300 mr-6 font-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-          ducimus, perferendis praesentium reprehenderit laudantium itaque{" "}
+          {HERO_CONTENT}
         </span>
         <br />
         <button className="relative overflow-hidden rounded-lg px-20 py-6 mt-4">
