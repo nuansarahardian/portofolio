@@ -11,6 +11,9 @@ body {
   background-repeat: none;
   overflow-x: hidden;
 }
+.slick-slide > div {
+  margin: 0 10px;
+}
 
 h1 {
   @apply text-2xl;
@@ -31,6 +34,11 @@ h1 {
   position: absolute;
   z-index: -100;
   animation: two 10s infinite;
+}
+.bg-shape3 {
+  position: absolute;
+  z-index: -100;
+  animation: three 10s infinite;
 }
 
 @keyframes one {
@@ -101,4 +109,32 @@ h1 {
     left: 300px;
     top: 400px;
   }
+}
+@keyframes three {
+  0% {
+    left: 0px;
+    top: 2000px;
+  }
+  25% {
+    left: 50px;
+    top: 2010px;
+  }
+  50% {
+    left: 100px;
+    top: 2050px;
+  }
+  75% {
+    left: 50px;
+    top: 2100px;
+  }
+  100% {
+    left: 0px;
+    top: 2000px;
+  }
+}
+.slick-dots li.slick-active button::before {
+  color: rgb(255, 255, 255) !important;
+}
+.slick-dots li button::before {
+  color: rgb(255, 255, 255);
 }

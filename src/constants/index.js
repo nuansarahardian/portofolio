@@ -4,7 +4,8 @@
 // import project4 from "../assets/portofolio4.png";
 // import project5 from "../assets/portofolio5.png";
 
-export const HERO_CONTENT = `I am a passionate front-end developer with a knack for crafting robust and scalable web applications. I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, and Restful API. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `
+Passionate Front-end Web Developer and UI/UX Designer, turning visions into reality with sleek, user-focused design and development.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
@@ -57,8 +58,7 @@ export const ORGANIZATION = [
 
 export const PROJECTS = [
   {
-    title:
-      "Mooneater: Application of Web Based Pre-Wedding Documentation Services",
+    title: "Mooneater: Pre-Wedding Documentation Services",
     image: "images/portofolio1.png",
     description:
       "Built a web-based application for pre-wedding photography bookings using PHP native",
@@ -66,21 +66,15 @@ export const PROJECTS = [
   },
   {
     title: "Siperba",
-    image: "images/portofolio2.png",
+    image: "images/portofolio3.png",
     description:
       "Developed a web-based tool for goods tracking and stock management using Laravel.",
     technologies: ["HTML", "CSS", "Bootstrap", "Laravel9"],
   },
-  {
-    title: "Portfolio Website",
-    image: "images/portofolio3.png",
-    description:
-      "Created an Android-based social media platform for Unsoed students using Flutter and Firebase.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
+
   {
     title: "UnsoedFess",
-    image: "images/portofolio4.png",
+    image: "images/portofolio2.png",
     description:
       "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
     technologies: ["Flutter", "FireBase"],
@@ -94,7 +88,7 @@ export const PROJECTS = [
   },
   {
     title: "Discover Indonesia",
-    image: "images/portofolio",
+    image: "images/portofolio4.png",
     description:
       "User-friendly app showcasing Indonesia's beauty and diversity. With an intuitive UI, users can effortlessly explore destinations, plan trips, and experience the rich culture and natural wonders of the archipelago.",
     technologies: ["Figma"],
@@ -102,61 +96,65 @@ export const PROJECTS = [
 ];
 
 export const CERTIFICATE = [
-  {
-    title: "Belajar Dasar UX Design",
-    company: "Dicoding Indonesia ",
-    year: "2024",
-  },
+  // {
+  //   title: "Belajar Dasar UX Design",
+  //   company: "Dicoding Indonesia ",
+  //   year: "2024",
+  // },
   {
     title: "Belajar Dasar Pemrograman Web",
     company: "Dicoding Indonesia ",
     year: "2024",
+    image: "images/pemweb.png",
   },
-  {
-    title: "Belajar Membuat Front-End Web untuk Pemula",
-    company: "Dicoding Indonesia ",
-    year: "2024",
-  },
-  {
-    title: "Belajar Dasar Pemrograman JavaScript",
-    company: "Dicoding Indonesia ",
-    year: "2024",
-  },
-  {
-    title: "Chairman",
-    company: "Himpunan Mahasiswa Informatika Universitas Jenderal Soedirman",
-    year: "2024",
-  },
+  // {
+  //   title: "Belajar Membuat Front-End Web untuk Pemula",
+  //   company: "Dicoding Indonesia ",
+  //   year: "2024",
+  // },
+  // {
+  //   title: "Belajar Dasar Pemrograman JavaScript",
+  //   company: "Dicoding Indonesia ",
+  //   year: "2024",
+  // },
   {
     title: "Chairman",
     company: "Himpunan Mahasiswa Informatika Universitas Jenderal Soedirman",
-    year: "2023",
+    year: "2024",
+    image: "images/kahim.png",
+  },
+  {
+    title: "Staf of Media Information and Communication Division",
+    company: "Himpunan Mahasiswa Informatika Universitas Jenderal Soedirman",
+    year: "2022",
+    image: "images/medkom.png",
   },
   {
     title: "Web Developer",
     company: "Dinas Kearsipan dan Perpustakaan Kabupaten Purbalingga",
     year: "2023",
+    image: "images/perpusda.png",
   },
-  {
-    title: "Operating Systems Laboratory Assistant",
-    company: "Informatics Laboratory Assistant",
-    year: "2024",
-  },
-  {
-    title: "Sertifikat Kelas Belajar ReactJS",
-    company: "CODEPOLITAN",
-    year: "2024",
-  },
-  {
-    title: "Sertifikat Kelas ReactJS State Management",
-    company: "CODEPOLITAN",
-    year: "2024",
-  },
-  {
-    title: "Sertifikat Kelas ReactJS Split Bill App",
-    company: "CODEPOLITAN",
-    year: "2024",
-  },
+  // {
+  //   title: "Operating Systems Laboratory Assistant",
+  //   company: "Informatics Laboratory Assistant",
+  //   year: "2024",
+  // },
+  // {
+  //   title: "Sertifikat Kelas Belajar ReactJS",
+  //   company: "CODEPOLITAN",
+  //   year: "2024",
+  // },
+  // {
+  //   title: "Sertifikat Kelas ReactJS State Management",
+  //   company: "CODEPOLITAN",
+  //   year: "2024",
+  // },
+  // {
+  //   title: "Sertifikat Kelas ReactJS Split Bill App",
+  //   company: "CODEPOLITAN",
+  //   year: "2024",
+  // },
 ];
 export const CONTACT = {
   address: "767 Fifth Avenue, New York, NY 10153 ",
