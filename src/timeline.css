@@ -293,11 +293,7 @@
     left: 100%;
     transform: rotate(180deg);
   }
-   {
-    /* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
-                    {data.year}
-                  </div> */
-  }
+
   /* layar besar date */
   .vertical-timeline--two-columns
     .vertical-timeline-element-content

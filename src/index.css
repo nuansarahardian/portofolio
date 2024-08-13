@@ -40,26 +40,51 @@ h1 {
   z-index: -100;
   animation: three 10s infinite;
 }
+.bg-shape4 {
+  position: absolute;
+  z-index: -100;
+  animation: four 10s infinite;
+}
+.bg-shape5 {
+  position: absolute;
+  z-index: -100;
+  animation: five 10s infinite;
+}
+.bg-shape6 {
+  position: absolute;
+  z-index: -100;
+  animation: six 10s infinite;
+}
+.bg-shape7 {
+  position: absolute;
+  z-index: -100;
+  animation: seven 10s infinite;
+}
+.bg-shape8 {
+  position: absolute;
+  z-index: -100;
+  animation: eight 10s infinite;
+}
 
 @keyframes one {
   0% {
-    left: -100px;
+    left: -400px;
     top: -100px;
   }
   25% {
-    left: -100px;
+    left: -250px;
     top: 70px;
   }
   50% {
-    left: 20px;
+    left: -180px;
     top: 150px;
   }
   75% {
-    left: 50px;
+    left: -150px;
     top: 10px;
   }
   100% {
-    left: -100px;
+    left: -400px;
     top: -100px;
   }
 }
@@ -90,26 +115,27 @@ h1 {
 }
 @keyframes two {
   0% {
-    left: 300px;
-    top: 400px;
+    left: 400px;
+    top: 1100px;
   }
   25% {
-    left: 350px;
-    top: 410px;
+    left: 550px;
+    top: 710px;
   }
   50% {
-    left: 400px;
-    top: 450px;
+    left: 350px;
+    top: 750px;
   }
   75% {
-    left: 350px;
-    top: 500px;
+    left: 450px;
+    top: 800px;
   }
   100% {
-    left: 300px;
-    top: 400px;
+    left: 400px;
+    top: 1100px;
   }
 }
+
 @keyframes three {
   0% {
     left: 0px;
@@ -130,6 +156,145 @@ h1 {
   100% {
     left: 0px;
     top: 2000px;
+  }
+}
+@media (min-width: 768px) {
+  @keyframes three {
+    0% {
+      left: 1200px;
+      top: 2000px;
+    }
+    25% {
+      left: 1050px;
+      top: 2010px;
+    }
+    50% {
+      left: 900px;
+      top: 2050px;
+    }
+    75% {
+      left: 950px;
+      top: 2100px;
+    }
+    100% {
+      left: 1200px;
+      top: 2000px;
+    }
+  }
+}
+@keyframes four {
+  0% {
+    left: -100px;
+    top: 3600px;
+  }
+  25% {
+    left: 50px;
+    top: 3910px;
+  }
+  50% {
+    left: 100px;
+    top: 3850px;
+  }
+  75% {
+    left: 50px;
+    top: 4100px;
+  }
+  100% {
+    left: -100px;
+    top: 3600px;
+  }
+}
+@media (min-width: 768px) {
+  @keyframes four {
+    0% {
+      left: -200px;
+      top: 3000px;
+    }
+    25% {
+      left: 50px;
+      top: 3210px;
+    }
+    50% {
+      left: 100px;
+      top: 3350px;
+    }
+    75% {
+      left: 50px;
+      top: 3100px;
+    }
+    100% {
+      left: -200px;
+      top: 3000px;
+    }
+  }
+}
+@keyframes five {
+  0% {
+    left: -100px;
+    top: 4600px;
+  }
+  25% {
+    left: 50px;
+    top: 4710px;
+  }
+  50% {
+    left: 100px;
+    top: 4750px;
+  }
+  75% {
+    left: 50px;
+    top: 4800px;
+  }
+  100% {
+    left: -100px;
+    top: 4600px;
+  }
+}
+
+@keyframes six {
+  0% {
+    left: 100px;
+    top: 6600px;
+  }
+  25% {
+    left: 250px;
+    top: 6710px;
+  }
+  50% {
+    left: 120px;
+    top: 6850px;
+  }
+  75% {
+    left: 150px;
+    top: 6580px;
+  }
+  100% {
+    left: 100px;
+    top: 6600px;
+  }
+}
+@media (min-width: 768px) {
+  @keyframes six {
+    0% {
+      left: 700px;
+      top: 5600px;
+    }
+    25% {
+      left: 550px;
+      top: 5710px;
+    }
+    50% {
+      left: 620px;
+      top: 5850px;
+    }
+    75% {
+      left: 450px;
+      top: 5580px;
+    }
+    100% {
+      left: 700px;
+      top: 5600px;
+    }
   }
 }
 .slick-dots li.slick-active button::before {
