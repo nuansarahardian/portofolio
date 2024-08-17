@@ -303,3 +303,9 @@ h1 {
 .slick-dots li button::before {
   color: rgb(255, 255, 255);
 }
+.card {
+  box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.1);
+}
+.card2 {
+  box-shadow: inset 0px 0px 90px rgba(255, 255, 255, 0.2);
+}

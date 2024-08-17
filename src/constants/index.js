@@ -13,6 +13,7 @@ export const sectionIds = [
   "experiences",
   "projects",
   "certificates",
+  "contact",
 ];
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
@@ -139,6 +140,7 @@ export const PROJECTS = [
       "Built a web-based application for pre-wedding photography bookings using PHP native",
     technologies: ["HTML", "CSS", "Bootstrap", "PHP", "MySQL"],
     category: "Web Development",
+    link: "https://github.com/nuansarahardian/mooneater",
   },
   {
     title: "Siperba",
@@ -147,6 +149,7 @@ export const PROJECTS = [
       "Developed a web-based tool for goods tracking and stock management using Laravel.",
     technologies: ["HTML", "CSS", "Bootstrap", "Laravel9"],
     category: "Web Development",
+    link: "https://github.com/maulanazh15/siperba-ver2",
   },
 
   {
@@ -156,6 +159,7 @@ export const PROJECTS = [
       "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
     technologies: ["Flutter", "FireBase"],
     category: "Mobile Development",
+    link: "https://github.com/maulana1k/unsoedfess",
   },
   {
     title: "Genggam App - Study Case",
@@ -164,6 +168,7 @@ export const PROJECTS = [
       "A platform for elderly people, , focusing on physical limitations and visual impairments",
     technologies: ["Figma"],
     category: "UI/UX Design",
+    link: "https://docs.google.com/presentation/d/1Pc7soPokuYnlYinP0GJiM5Ix120vdGRwjyK6wsFCjw4/edit#slide=id.p",
   },
   {
     title: "Discover Indonesia",
@@ -172,6 +177,7 @@ export const PROJECTS = [
       "User-friendly app showcasing Indonesia's beauty and diversity. With an intuitive UI, users can effortlessly explore destinations, plan trips, and experience the rich culture and natural wonders of the archipelago.",
     technologies: ["Figma"],
     category: "UI/UX Design",
+    link: "https://dribbble.com/shots/24271928-Indonesian-Tourism-App-UI-Design?utm_source=Clipboard_Shot&utm_campaign=nuansarahardian72&utm_content=Indonesian%20Tourism%20App%20UI%20Design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=nuansarahardian72&utm_content=Indonesian%20Tourism%20App%20UI%20Design&utm_medium=Social_Share",
   },
 ];
 

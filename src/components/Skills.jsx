@@ -5,57 +5,172 @@ import javascript from "../assets/javascript.png";
 import tailwind from "../assets/tailwind.png";
 import node from "../assets/node.png";
 import laravel from "../assets/laravel.png";
+import education from "../assets/education.png";
 import { SKILL } from "../constants";
 import { TOOLS } from "../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGraduationCap,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+
+const iconVariants = (duration) => ({
+  initial: { y: -10 },
+  animate: {
+    y: [10, -10],
+    transition: {
+      duration: duration,
+      ease: "linear",
+      repeat: Infinity,
+      repeatType: "reverse",
+    },
+  },
+});
 
 const Skills = () => {
   return (
-    <section id="about" className="sm:pt-32">
-      <div className="w-[75%] flex flex-col justify-center item m-auto">
-        <div className="md:text-5xl text-4xl font-bold  flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-700">
+    <section id="about" className="sm:pt-24 h-full">
+      <div className="md:w-[90%] lg:w-[56%] w-[90%] flex flex-col justify-center item m-auto">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.3 }}
+          className="md:text-5xl mb-8 text-4xl font-bold  flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white "
+        >
           About Me
+        </motion.div>
+
+        <div className="grid md:grid-cols-9 grid-cols-2 gap-6 justify-center ">
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className=" font-normal  md:col-span-6 col-span-2 card content drop-shadow-md h-fit my-auto p-[28px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl "
+          >
+            <p className="text-transparent leading-relaxed bg-clip-text bg-gradient-to-br from-white lg:text-[18px] md:text-[16px] text-sm text-justify">
+              I'm passionate about <b>UI/UX design</b>, focused on creating
+              intuitive and visually appealing products that meet user needs
+              through detailed research. I also enjoy{" "}
+              <b>Front-End Web Development</b>, using React JS and Framer Motion
+              to build dynamic, interactive apps with smooth animations and
+              responsive designs.
+            </p>
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className="md:col-span-3 col-span-1 card content drop-shadow-md h-full p-[24px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+          >
+            <div className=" flex flex-col justify-center m-auto h-full text-transparent bg-clip-text bg-gradient-to-br from-white">
+              <div className="text-transparent bg-clip-text bg-gradient-to-br from-white flex flex-col justify-center m-auto">
+                <FontAwesomeIcon
+                  className="text-5xl text-gray-200/75 mb-2"
+                  icon={faLocationDot}
+                />
+                <div className="text-center">
+                  <p className="font-normal  md:text-[18px] text-sm ">
+                    Purbalingga
+                  </p>
+                  <p className="font-bold md:text-[18px] text-sm">
+                    Central Java
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+            className="md:col-span-4 card col-span-1 content drop-shadow-md h-full p-[24px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+          >
+            <div className="flex flex-col justify-center items-center h-full">
+              <img src={education} className="w-12 mb-4 opacity-65" alt="" />
+
+              <div className="text-center text-transparent bg-clip-text bg-gradient-to-br from-white ">
+                <p className="font-normal md:text-[18px] text-sm">
+                  Jenderal Soedirman University
+                </p>
+                <p className="font-bold md:text-[18px] text-sm">
+                  S1 Informatics, class of 2021
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+            className="md:col-span-5 col-span-2 top card content drop-shadow-md h-fit p-[28px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl "
+          >
+            <p className="text-transparent leading-relaxed bg-clip-text bg-gradient-to-br from-white md:text-[18px] text-sm text-justify">
+              My experience leading projects and organizations has sharpened my
+              skills in
+              <b> public speaking, leadership, problem-solving, and teamwork</b>
+              . I've learned to communicate effectively, guide teams,
+              collaborate well, and tackle challenges with strategic solutions.
+            </p>
+          </motion.div>
         </div>
-        <p className="mt-6 text-center font-normal text-base justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-neutral-100 to-neutral-500 place-content-center mb-12">
-          I am a highly motivated undergraduate <b>Informatics</b> student at
-          <b> Universitas Jenderal Soedirman, class of 2021,</b> specializing in
-          <b> UI/UX Design </b>and <b>Front-end Web Development</b>. With a
-          strong focus on creating intuitive and engaging user experiences, I
-          also have experience in Mobile development using Flutter.
-          <b> My leadership and communication skills </b> have been honed
-          through diverse project management and organizational roles. I am
-          proficient in both <b>Windows and Linux</b> operating systems,
-          equipping me to tackle a wide range of challenges in{" "}
-          <b>development and design</b>.
-        </p>
+
         <div className="text-white"></div>
       </div>
-      <div className=" flex flex-col justify-center mx-auto max-w-[1200px] h-auto mb-8  sm:mt-10 mt-0">
-        <div className="font-medium md:text-3xl text-xl  flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-700">
+      <div className=" flex flex-col justify-center mx-auto max-w-[1200px] h-auto mb-8  sm:mt-20 mt-12">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -30 }}
+          transition={{ duration: 0.3, delay: 0.5 }}
+          className="font-medium md:text-3xl text-xl pb-1 flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white"
+        >
           Frameworks & Languages
-        </div>
-        <div className="flex justify-center md:mt-2 w-[100%] flex-wrap pl-10 pr-10 pt-4">
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -30 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
+          className="flex justify-center md:mt-1 w-[100%] flex-wrap pl-10 pr-10 pt-4"
+        >
           {SKILL.map((skill, index) => (
-            <div
+            <motion.div
+              variants={iconVariants(1.5 + index + 1)}
+              initial="initial"
+              animate="animate"
               key={index}
-              className="md:min-w-[100px] md:min-h-[100px] min-w-[80px] min-h-[80px] m-2   rounded-3xl bg-gradient-to-b from-blue-200/20 from-10% border-[1px] border-slate-500 backdrop-filter backdrop-blur-4xl flex place-content-center hover:from-blue-500/20  hover:scale-[1.05]"
+              className=" shadow-inner shadow-white/30 md:min-w-[100px] md:min-h-[100px] min-w-[80px] min-h-[80px] m-2   rounded-3xl bg-gradient-to-b from-blue-200/20 from-10% border-[1px] border-slate-500 backdrop-filter backdrop-blur-4xl flex place-content-center hover:from-blue-500/20  hover:scale-[1.05]"
             >
               <img className="md:h-[80px] h-[60px] my-auto" src={skill.image} />
-            </div>
+            </motion.div>
           ))}
-        </div>
-        <div className="font-medium md:text-3xl text-xl md:mt-16 mt-12 flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-700">
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -30 }}
+          transition={{ duration: 0.3, delay: 0.7 }}
+          className="font-medium md:text-3xl text-xl md:mt-8 mt-12 flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-700"
+        >
           Tools
-        </div>
-        <div className="flex justify-center md:mt-2 w-[100%] flex-wrap pl-10 pr-10 pt-4">
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -30 }}
+          transition={{ duration: 0.3, delay: 0.8 }}
+          className="flex justify-center md:mt-1 w-[100%] flex-wrap pl-10 pr-10 pt-2"
+        >
           {TOOLS.map((tools, index) => (
-            <div
+            <motion.div
+              variants={iconVariants(1 + index + 1)}
+              initial="initial"
+              animate="animate"
               key={index}
-              className="md:min-w-[100px] md:min-h-[100px] min-w-[80px] min-h-[80px] m-2   rounded-3xl bg-gradient-to-b from-blue-200/20 from-10% border-[1px] border-slate-500 backdrop-filter backdrop-blur-4xl flex place-content-center hover:from-blue-500/20  hover:scale-[1.05]"
+              className=" shadow-inner shadow-white/30 md:min-w-[100px] md:min-h-[100px] min-w-[80px] min-h-[80px] m-2   rounded-3xl bg-gradient-to-b from-blue-200/20 from-10% border-[1px] border-slate-500 backdrop-filter backdrop-blur-4xl flex place-content-center hover:from-blue-500/20  hover:scale-[1.05]"
             >
               <img className="md:h-[80px] h-[60px] my-auto" src={tools.image} />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

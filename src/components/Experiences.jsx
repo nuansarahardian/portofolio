@@ -4,17 +4,29 @@ import { VerticalTimeline } from "react-vertical-timeline-component";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "../timeline.css";
 import { ORGANIZATION, WORK_EXPERIENCES } from "../constants";
+import { motion } from "framer-motion";
 
 function Experiences() {
   return (
     <section id="experiences">
-      <div className="min-h-[100vh] pt-0 sm:pt-[80px] pb-[80px] pr-[15px] pl-[15px] text-white sm:mt-0 mt-20">
-        <div className="md:text-5xl text-4xl font-bold md:mt-16 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 ">
-          Experiences
-        </div>
-        <div className="md:text-3xl text-xl font-medium md:mt-0 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 ">
+      <div className="min-h-[100vh] pt-0 sm:pt-[20px] pb-[80px] pr-[6px] pl-[6px] text-white sm:mt-0 mt-20">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+        >
+          <div className="md:text-5xl text-4xl font-bold md:mt-16 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 ">
+            Experiences
+          </div>
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -40 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+          className="md:text-3xl text-xl font-medium md:mt-0 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 "
+        >
           Orgazinational Experiences
-        </div>
+        </motion.div>
         <div className="max-w-[1300px] m-auto flex flex-wrap relative">
           {/* <div className="absolute w-[2px] h-[100%] bg-white sm:left-[calc(50%-1px)] left-[7px] mt-5"></div> */}
           {/* item1 */}
@@ -26,7 +38,7 @@ function Experiences() {
                 {/* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
                     {data.year}
                   </div> */}
-                <div className="content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-4xl   ">
+                <div className="content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
                   <div className="text-2xl font-semibold  mb-1 text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
                     {data.role}
                   </div>
@@ -44,9 +56,14 @@ function Experiences() {
             ))}
           </VerticalTimeline>
         </div>
-        <div className="md:text-3xl text-xl font-medium md:mt-16 mt-12 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-b from-white p-2  ">
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.3 }}
+          className="md:text-3xl text-xl font-medium md:mt-16 mt-12 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-br from-white p-2  "
+        >
           Professional Experiences
-        </div>
+        </motion.div>
 
         <div className="max-w-[1300px] m-auto flex flex-wrap relative">
           {/* <div className="absolute w-[2px] h-[100%] bg-white sm:left-[calc(50%-1px)] left-[7px] mt-5"></div> */}
@@ -59,7 +76,7 @@ function Experiences() {
                 {/* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
                     {data.year}
                   </div> */}
-                <div className="content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-4xl   ">
+                <div className="card content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl   ">
                   <div className="text-2xl font-semibold mb-1 text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
                     {data.role}
                   </div>
