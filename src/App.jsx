@@ -17,7 +17,11 @@ export default function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Nuansa Rahardian's Portofolio</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        <meta
+          name="description"
+          content="Nuansa Rahardian's Personal Portofolio"
+        />
       </Helmet>
       ;
       <div className="overflow-x-hidden w-[100%] relative max-w-[screen]">
