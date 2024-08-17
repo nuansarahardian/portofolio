@@ -37,14 +37,14 @@ const Contact = () => {
                 onClick={() =>
                   newTab("https://www.linkedin.com/in/nuansarahardian/")
                 }
-                className=" flex drop-shadow-md w-14 h-14  p-[12px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+                className=" flex drop-shadow-md w-14 h-14  p-[12px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl hover:bg-blue-900"
               >
                 <AiFillLinkedin className="w-[40px] h-auto text-gray-300/80 m-auto "></AiFillLinkedin>
               </button>
 
               <button
                 onClick={() => newTab("https://github.com/nuansarahardian")}
-                className="flex drop-shadow-md w-14 h-14 p-[8px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+                className="flex drop-shadow-md w-14 h-14 p-[8px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl hover:bg-slate-800"
               >
                 <AiFillGithub className="w-[40px] h-auto text-gray-300/85 m-auto"></AiFillGithub>
               </button>
@@ -52,7 +52,7 @@ const Contact = () => {
                 onClick={() =>
                   newTab("https://wa.me/+6282134276794?text=Halo+Nuansa!")
                 }
-                className=" flex drop-shadow-md w-14 h-14 p-[8px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+                className=" flex drop-shadow-md w-14 h-14 p-[8px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl hover:bg-green-800"
               >
                 <FontAwesomeIcon
                   icon={faWhatsapp}
@@ -63,7 +63,7 @@ const Contact = () => {
                 onClick={() =>
                   newTab("https://www.instagram.com/nuansarahardian/")
                 }
-                className="flex drop-shadow-md w-14 h-14 p-[8px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+                className="flex drop-shadow-md w-14 h-14 p-[8px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl hover:bg-pink-900"
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
@@ -72,7 +72,7 @@ const Contact = () => {
               </button>
               <button
                 onClick={() => newTab("https://dribbble.com/nuansarahardian72")}
-                className="flex drop-shadow-md w-14 h-14 p-[8px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+                className="flex drop-shadow-md w-14 h-14 p-[8px] rounded-3xl mt-[0px] bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl hover:bg-pink-500"
               >
                 <FontAwesomeIcon
                   icon={faDribbble}
