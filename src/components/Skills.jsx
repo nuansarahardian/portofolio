@@ -34,8 +34,9 @@ const Skills = () => {
       <div className="md:w-[90%] lg:w-[56%] w-[90%] flex flex-col justify-center item m-auto">
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, y: -70 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="md:text-5xl mb-8 text-4xl font-bold  flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white "
         >
           About Me
@@ -44,9 +45,10 @@ const Skills = () => {
         <div className="grid md:grid-cols-9 grid-cols-2 gap-6 justify-center ">
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            className=" font-normal  md:col-span-6 col-span-2 card content drop-shadow-md h-fit my-auto p-[28px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl "
+            initial={{ opacity: 0, y: -70 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="hover:bg-gradient-to-tr hover:from-indigo-600/20 font-normal  md:col-span-6 col-span-2 card content drop-shadow-md h-fit my-auto p-[28px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl "
           >
             <p className="text-transparent leading-relaxed bg-clip-text bg-gradient-to-br from-white lg:text-[18px] md:text-[16px] text-sm text-justify">
               I'm passionate about <b>UI/UX design</b>, focused on creating
@@ -59,9 +61,10 @@ const Skills = () => {
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            className="md:col-span-3 col-span-1 card content drop-shadow-md h-full p-[24px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+            initial={{ opacity: 0, y: -70 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className=" hover:bg-gradient-to-tr hover:from-indigo-600/20 md:col-span-3 col-span-1 card content drop-shadow-md h-full p-[24px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
           >
             <div className=" flex flex-col justify-center m-auto h-full text-transparent bg-clip-text bg-gradient-to-br from-white">
               <div className="text-transparent bg-clip-text bg-gradient-to-br from-white flex flex-col justify-center m-auto">
@@ -82,9 +85,10 @@ const Skills = () => {
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
-            className="md:col-span-4 card col-span-1 content drop-shadow-md h-full p-[24px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
+            initial={{ opacity: 0, y: -70 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="hover:bg-gradient-to-tr hover:from-indigo-600/20 md:col-span-4 card col-span-1 content drop-shadow-md h-full p-[24px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl"
           >
             <div className="flex flex-col justify-center items-center h-full">
               <img src={education} className="w-12 mb-4 opacity-65" alt="" />
@@ -102,9 +106,10 @@ const Skills = () => {
 
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
-            className="md:col-span-5 col-span-2 top card content drop-shadow-md h-fit p-[28px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl "
+            initial={{ opacity: 0, y: -70 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+            className=" hover:bg-gradient-to-tr hover:from-indigo-600/20 md:col-span-5 col-span-2 top card content drop-shadow-md h-fit p-[28px]  rounded-[32px]  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl "
           >
             <p className="text-transparent leading-relaxed bg-clip-text bg-gradient-to-br from-white md:text-[18px] text-sm text-justify">
               My experience leading projects and organizations has sharpened my
@@ -118,19 +123,21 @@ const Skills = () => {
 
         <div className="text-white"></div>
       </div>
-      <div className=" flex flex-col justify-center mx-auto max-w-[1200px] h-auto mb-8  sm:mt-20 mt-12">
+      <div className=" flex flex-col justify-center mx-auto max-w-[1200px] h-auto mb-8  sm:mt-20 mt-20">
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.3, delay: 0.5 }}
+          initial={{ opacity: 0, y: -60 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
           className="font-medium md:text-3xl text-xl pb-1 flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white"
         >
           Frameworks & Languages
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.3, delay: 0.6 }}
+          initial={{ opacity: 0, y: -60 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
           className="flex justify-center md:mt-1 w-[100%] flex-wrap pl-10 pr-10 pt-4"
         >
           {SKILL.map((skill, index) => (
@@ -139,7 +146,7 @@ const Skills = () => {
               initial="initial"
               animate="animate"
               key={index}
-              className=" shadow-inner shadow-white/30 md:min-w-[100px] md:min-h-[100px] min-w-[80px] min-h-[80px] m-2   rounded-3xl bg-gradient-to-b from-blue-200/20 from-10% border-[1px] border-slate-500 backdrop-filter backdrop-blur-4xl flex place-content-center hover:from-blue-500/20  hover:scale-[1.05]"
+              className=" shadow-inner shadow-white/30 md:min-w-[100px] md:min-h-[100px] min-w-[80px] min-h-[80px] m-2   rounded-3xl bg-gradient-to-b from-blue-200/20 from-10% border-[1px] border-slate-500 backdrop-filter backdrop-blur-4xl flex place-content-center hover:bg-indigo-700/30  hover:scale-[1.05]"
             >
               <img className="md:h-[80px] h-[60px] my-auto" src={skill.image} />
             </motion.div>
@@ -147,17 +154,19 @@ const Skills = () => {
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.3, delay: 0.7 }}
-          className="font-medium md:text-3xl text-xl md:mt-8 mt-12 flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-700"
+          initial={{ opacity: 0, y: -60 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="font-medium md:text-3xl text-xl md:mt-8 mt-6 sm:mb-0 mb-3 flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-700"
         >
           Tools
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.3, delay: 0.8 }}
-          className="flex justify-center md:mt-1 w-[100%] flex-wrap pl-10 pr-10 pt-2"
+          initial={{ opacity: 0, y: -60 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="flex justify-center md:mt-1 w-[100%] flex-wrap pl-10 pr-10 sm:pt-2 mb-2"
         >
           {TOOLS.map((tools, index) => (
             <motion.div
@@ -165,7 +174,7 @@ const Skills = () => {
               initial="initial"
               animate="animate"
               key={index}
-              className=" shadow-inner shadow-white/30 md:min-w-[100px] md:min-h-[100px] min-w-[80px] min-h-[80px] m-2   rounded-3xl bg-gradient-to-b from-blue-200/20 from-10% border-[1px] border-slate-500 backdrop-filter backdrop-blur-4xl flex place-content-center hover:from-blue-500/20  hover:scale-[1.05]"
+              className=" shadow-inner shadow-white/30 md:min-w-[100px] md:min-h-[100px] min-w-[80px] min-h-[80px] m-2   rounded-3xl bg-gradient-to-b from-blue-200/20 from-10% border-[1px] border-slate-500 backdrop-filter backdrop-blur-4xl flex place-content-center  hover:bg-indigo-700/30  hover:scale-[1.05]"
             >
               <img className="md:h-[80px] h-[60px] my-auto" src={tools.image} />
             </motion.div>

@@ -47,6 +47,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -50 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <div className="md:text-5xl text-4xl font-bold md:mt-16 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-br from-white p-2">
             Projects
@@ -54,13 +55,13 @@ const Projects = () => {
           <div className="buttons-container flex justify-center mx-4 gap-3">
             {filters.map((category, index) => (
               <button
+                key={`filters-${index}`}
                 onClick={() => handleFilterButtonClick(category)}
                 className={`button ${
                   selectedFilter === category
                     ? " active inline-block mt-4 pl-3 pr-3 pt-2 pb-2  md:text-base text-xs rounded-xl border-[0.5px]  border-slate-100/30 backdrop-filter backdrop-blur-4xl  bg-white/30 text-gradient-to-r text-white hover:scale-[1.1] shadow-inner shadow-white/30"
                     : " inline-block mt-4 pl-3 pr-3 pt-2 pb-2  md:text-base text-xs rounded-xl border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-800/10 hover:scale-[1.1] shadow-inner shadow-white/30"
                 }`}
-                key={`filters-${index}`}
               >
                 {category}
               </button>
@@ -70,16 +71,15 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-[1350px] mx-auto mb-8 md:mb-12 md:mt-8 mt-6 ml-2 mr-2 md:gap-y-6  lg:gap-y-8 gap-y-6">
           {filteredItems.map((project, index) => (
             <motion.div
+              key={`PROJECTS-${index}`}
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
               className="relative group"
             >
               <div className="lg:h-[full] md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px]  -inset-1  absolute bg-gradient-to-br from-indigo-500  blur opacity-0 group-hover:opacity-50 group-hover:scale-105 transition duration-300"></div>
-              <div
-                key={`PROJECTS-${index}`}
-                className=" card  lg:h-[full]  md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px] bg-gradient-to-b from-black/30 from-60% to-white/5 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center"
-              >
+              <div className=" card  lg:h-[full]  md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px] bg-gradient-to-b from-black/30 from-60% to-white/5 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center">
                 <div className="flex justify-between flex-col ">
                   <div className="p-4 sm:p-5 flex flex-col ">
                     <div className="rounded-3xl overflow-hidden  md:h-48 lg:h-64 h-full ">

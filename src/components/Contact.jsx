@@ -16,23 +16,25 @@ const Contact = () => {
   };
   return (
     <section id="contact">
-      <div className="h-fit flex items-center flex-col justify-center mt-16 mb-24">
+      <div className="h-fit flex items-center flex-col justify-center mt-16 sm:mb-24 mb-32">
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.3, delay: 0.6 }}
+          initial={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
           className="md:text-5xl text-4xl font-bold  flex  text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 mb-6"
         >
           Let's Connect
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.3, delay: 0.8 }}
-          className="sm:px-0 lg:w-[60%] w-[90%] mx-auto  grid md:grid-cols-7 grid-cols-none  place-items-center gap-4 items-center justify-center"
+          initial={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="sm:px-0 lg:w-[60%] w-[90%] mx-auto  grid md:grid-cols-9 grid-cols-none  place-items-center lg:gap-x-4 md:gap-x-8 gap-2 items-center justify-center"
         >
-          <div className="col-span-1 place-content-center card md:w-[95%] w-[100%] content drop-shadow-md h-full  rounded-3xl  bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl">
-            <ul className="flex md:flex-col flex-row md:gap-4 gap-4 items-center justify-center m-auto py-4">
+          <div className="col-span-1 place-content-center card md:w-fit w-full px-4  content drop-shadow-md sm:h-full h-fit rounded-3xl  bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl">
+            <ul className="flex md:flex-col flex-row md:gap-4 gap-4 items-center justify-center m-auto py-4 h-fit w-fit">
               <button
                 onClick={() =>
                   newTab("https://www.linkedin.com/in/nuansarahardian/")
@@ -81,7 +83,7 @@ const Contact = () => {
               </button>
             </ul>
           </div>
-          <div className="md:col-span-6 col-span-1 place-content-center card sm:w-[100%] w-[100%] content drop-shadow-md h-full  p-[24px]  rounded-3xl  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl ">
+          <div className="md:col-span-8 col-span-1 place-content-center card sm:w-[100%] w-[100%] content drop-shadow-md h-full  p-[24px]  rounded-3xl  mt-[0px]  sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl ">
             <div className="md:text-xl text-lg mb-2 font-normal  flex  text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white ml-2 ">
               Send me an Email!
             </div>

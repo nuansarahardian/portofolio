@@ -13,7 +13,8 @@ function Experiences() {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.3, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          viewport={{ once: true }}
         >
           <div className="md:text-5xl text-4xl font-bold md:mt-16 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 ">
             Experiences
@@ -22,7 +23,8 @@ function Experiences() {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -40 }}
-          transition={{ duration: 0.3, delay: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          viewport={{ once: true }}
           className="md:text-3xl text-xl font-medium md:mt-0 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 "
         >
           Orgazinational Experiences
@@ -38,7 +40,7 @@ function Experiences() {
                 {/* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
                     {data.year}
                   </div> */}
-                <div className="content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
+                <div className=" hover:bg-gradient-to-tr hover:from-indigo-600/20 content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
                   <div className="text-2xl font-semibold  mb-1 text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
                     {data.role}
                   </div>
@@ -58,8 +60,9 @@ function Experiences() {
         </div>
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, y: -40 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
           className="md:text-3xl text-xl font-medium md:mt-16 mt-12 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-br from-white p-2  "
         >
           Professional Experiences
@@ -76,7 +79,7 @@ function Experiences() {
                 {/* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
                     {data.year}
                   </div> */}
-                <div className="card content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl   ">
+                <div className="hover:bg-gradient-to-tr hover:from-indigo-600/20 card content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl   ">
                   <div className="text-2xl font-semibold mb-1 text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
                     {data.role}
                   </div>

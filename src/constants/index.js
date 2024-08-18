@@ -60,6 +60,9 @@ export const TOOLS = [
   {
     image: "https://skillicons.dev/icons?i=illustrator",
   },
+  {
+    image: "https://skillicons.dev/icons?i=vscode",
+  },
 ];
 
 export const WORK_EXPERIENCES = [
@@ -285,6 +288,20 @@ export const CERTIFICATE = [
     year: "2022",
     image: "images/fkr.jpeg",
     category: "Organization",
+  },
+  {
+    title: "Genius 2024",
+    company: "GenBI Purwokerto",
+    year: "2024",
+    image: "images/genius.png",
+    category: "Committee",
+  },
+  {
+    title: "Operating System Laboratory Assistant",
+    company: "Informatics Laboratory Assistant",
+    year: "2024",
+    image: "images/asprak.png",
+    category: "Work",
   },
 ];
 export const CONTACT = {
