@@ -75,10 +75,10 @@ function Hero() {
                     "https://drive.google.com/drive/folders/1BtHeP9AGw41TQE0fLACT27HjFnRzKKzX"
                   )
                 }
-                className="card relative group lg:w-[180px] md:w-48 sm:h-14 h-12 place-content-center justify-center items-center flex pl-3 pr-3 pt-2 pb-2 mr-3 text-xl rounded-2xl border-[0.5px] border-slate-100/40 bg-gradient-to-br backdrop-filter backdrop-blur-lg from-gray-800/90 hover:scale-105 hover:bg-slate-300/10"
+                className="card relative group lg:w-[180px] md:w-48 sm:h-12 h-12 place-content-center justify-center items-center flex pl-3 pr-3 sm:pr-0 sm:pl-0 pt-2 pb-2 mr-3 text-xl rounded-2xl border-[0.5px] border-slate-100/40 bg-gradient-to-br backdrop-filter backdrop-blur-lg from-gray-800/90 hover:scale-105 hover:bg-slate-300/10"
               >
-                <div className="  sm:rounded-[40px] rounded-[36px]  -inset-1  absolute bg-gradient-to-br from-indigo-500  blur-md backdrop-blur-md opacity-25 group-hover:opacity-70 group-hover:scale-105 transition duration-300"></div>
-                <div className=" card   sm:rounded-[40px] rounded-[36px] bg-gradient-to-b from-black/30 from-60% to-white/5 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center "></div>
+                <div className="  sm:rounded-[36px] rounded-[28px]  -inset-1  absolute bg-gradient-to-br from-indigo-500  blur-md backdrop-blur-md sm:opacity-10 opacity-5 group-hover:opacity-70 group-hover:scale-105 transition duration-300"></div>
+                <div className=" card   sm:rounded-[36px] rounded-[28px] bg-gradient-to-b from-black/50 from-60% to-white border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center "></div>
                 <p className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-200/20 text-sm lg:text-lg">
                   Download CV
                 </p>
