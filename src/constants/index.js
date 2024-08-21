@@ -67,16 +67,6 @@ export const TOOLS = [
 
 export const WORK_EXPERIENCES = [
   {
-    year: "Jul 2023 - Aug 2023",
-    role: "Internship Web Developer",
-    company: "Dinas Kearsipan dan Perpustakaan Kabupaten Purbalingga",
-    description: [
-      "Revamped the official government website's design and UI, implementing improvements and features to enhance user experience and functionality, improving user engagement by 20%",
-      "Conducted testing on the Inlislite application based on Yii 2",
-    ],
-    technologies: ["WordPress", "Figma", "PHP", "Yii2"],
-  },
-  {
     year: "Feb 2024 - May 2024",
     role: "Operating Systems Laboratory Assistant",
     company: "Informatics Laboratory Assistant",
@@ -86,20 +76,22 @@ export const WORK_EXPERIENCES = [
       "Developed exam and lab assignment questions, and evaluated student submissions, ensuring a comprehensive assessment of their skills",
     ],
     technologies: ["Linux", "Windows"],
+    logo: "images/laboratory.png",
+  },
+
+  {
+    year: "Jul 2023 - Aug 2023",
+    role: "Internship Web Developer",
+    company: "Dinas Kearsipan dan Perpustakaan Kabupaten Purbalingga",
+    description: [
+      "Revamped the official government website's design and UI, implementing improvements and features to enhance user experience and functionality, improving user engagement by 20%",
+      "Conducted testing on the Inlislite application based on Yii 2",
+    ],
+    technologies: ["WordPress", "Figma", "PHP", "Yii2"],
+    logo: "images/dinarpus.png",
   },
 ];
 export const ORGANIZATION = [
-  {
-    year: "Mar 2023 - Mar 2024",
-    role: "Chairman",
-    company:
-      "Himpunan Mahasiswa Informatika (HMIF) Universitas Jenderal Soedirman",
-    description: [
-      "Led and managed a team of 55 active members across 8 divisions",
-      "Developed and implemented 16 work programs and 23 work agendas, resulting in a Very Good rating for the association throughout the term",
-      "Initiated organizational policies and fostered positive relationships among members and external stakeholders through effective coordination and communication.",
-    ],
-  },
   {
     year: "Mar 2024 - Present",
     role: "Staf External Media Relations Division",
@@ -109,29 +101,39 @@ export const ORGANIZATION = [
       "Developed a data-driven content calendar featuring fresh articles and information about Genbi activities",
       "Increased website traffic and user engagement by implementing strategic content and design improvements.",
     ],
+    logo: "images/genbi.png",
   },
-];
-export const PROFESSIONAL = [
   {
-    year: "Jul 2023 - Aug 2023",
-    role: "Web Developer Intern",
-    company:
-      "Himpunan Mahasiswa Informatika (HMIF) Universitas Jenderal Soedirman",
+    year: "Mar 2024 - Present",
+    role: "Science and Technology Division Supervisor",
+    company: "Dewan Pengawas Organisasi (DPO) HMIF Unsoed",
+    description: [
+      "Oversaw the successful execution of 9 planned agendas and work programs, ensuring alignment with the department's goals and objectives.",
+      "Provided insights and recommendations on organizing activities in technology and website development.",
+      "Monitored the execution of activities, including efforts to enhance achievements in the Informatics department.",
+    ],
+    logo: "images/hmif.png",
+  },
+  {
+    year: "Mar 2023 - Mar 2024",
+    role: "Chairman",
+    company: "Himpunan Mahasiswa Informatika (HMIF) Unsoed",
     description: [
       "Led and managed a team of 55 active members across 8 divisions",
       "Developed and implemented 16 work programs and 23 work agendas, resulting in a Very Good rating for the association throughout the term",
       "Initiated organizational policies and fostered positive relationships among members and external stakeholders through effective coordination and communication.",
     ],
+    logo: "images/hmif.png",
   },
   {
-    year: "Feb 2023 - May 2023",
-    role: "Staf External Media Relations Division - Media Communication and Information Departmen",
-    company: "Generasi Baru Indonesia (GENBI) Purwokerto",
+    year: "Mar 2022 - Mar 2023",
+    role: "Staf of Media, Communication, and Information Division",
+    company: "Himpunan Mahasiswa Informatika (HMIF) Unsoed",
     description: [
-      "Elevated Genbi's online presence through UX and branding website optimization",
-      "Developed a data-driven content calendar featuring fresh articles and information about Genbi activities",
-      "Increased website traffic and user engagement by implementing strategic content and design improvements.",
+      "Spearheaded the Informatics Talk Podcast as the lead organizer, ensuring seamless execution and valuable content delivery.",
+      "Curated and distributed vital information for informatics students across Instagram, YouTube, and TikTok, effectively engaging the audience and boosting awareness through multiple platforms.",
     ],
+    logo: "images/hmif.png",
   },
 ];
 
@@ -302,6 +304,13 @@ export const CERTIFICATE = [
     year: "2024",
     image: "images/asprak.png",
     category: "Work",
+  },
+  {
+    title: "Certified Developer",
+    company: "Alibaba Cloud",
+    year: "2024",
+    image: "images/developer.png",
+    category: "Course",
   },
 ];
 export const CONTACT = {

@@ -128,11 +128,8 @@ const Certificates = () => {
                   >
                     <div className="p-4 flex flex-col">
                       <button onClick={() => getData(data.image, data.title)}>
-                        <div className="rounded-3xl overflow-hidden w-full object-cover sm:h-[230px] h-full">
-                          <LazyLoadImage
-                            className=" hover:scale-105"
-                            src={data.image}
-                          />
+                        <div className="rounded-3xl overflow-hidden w-full object-cover sm:h-[230px] h-full bg-slate-500">
+                          <img className=" hover:scale-105" src={data.image} />
                         </div>
                       </button>
 

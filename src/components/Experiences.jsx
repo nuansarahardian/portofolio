@@ -5,6 +5,8 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "../timeline.css";
 import { ORGANIZATION, WORK_EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
+import dinarpus from "../assets/dinarpus.png";
+// import "react-vertical-timeline-component/style.min.css";
 
 function Experiences() {
   return (
@@ -41,13 +43,21 @@ function Experiences() {
                     {data.year}
                   </div> */}
                 <div className=" hover:bg-gradient-to-tr hover:from-indigo-600/20 content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
-                  <div className="text-2xl font-semibold  mb-1 text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
-                    {data.role}
+                  <div className="flex gap-4 items-center">
+                    <div className="mb-4 drop-shadow-md h-full p-[12px]  rounded-3xl mt-[0px]  bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card">
+                      <img className="max-w-16 h-16" src={data.logo} alt="" />
+                    </div>
+                    <div>
+                      <div className="sm:text-[22px] leading-tight mb-1 text-lg font-bold   text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
+                        {data.role}
+                      </div>
+                      <div className="text-sm font-semibold mb-4 text-white/70">
+                        {data.company}
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-md font-thin mb-4 text-white">
-                    {data.company}
-                  </div>
-                  <ul className="list-decimal ml-4">
+
+                  <ul className="list-decimal ml-4 sm:text-base sm:font-thin font-normal text-sm">
                     {data.description.map((desc, index) => (
                       <li key={index}> {desc}</li>
                     ))}
@@ -79,14 +89,22 @@ function Experiences() {
                 {/* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
                     {data.year}
                   </div> */}
-                <div className="hover:bg-gradient-to-tr hover:from-indigo-600/20 card content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl   ">
-                  <div className="text-2xl font-semibold mb-1 text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
-                    {data.role}
+                <div className=" hover:bg-gradient-to-tr hover:from-indigo-600/20 content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
+                  <div className="flex gap-4 items-center ">
+                    <div className="mb-4 drop-shadow-md h-full p-[12px]  rounded-3xl  mt-[0px]  bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
+                      <img className="max-w-16 h-16 " src={data.logo} alt="" />
+                    </div>
+                    <div>
+                      <div className="sm:text-[22px] leading-tight mb-1 text-lg font-bold   text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
+                        {data.role}
+                      </div>
+                      <div className="text-sm font-semibold mb-4 text-white/70">
+                        {data.company}
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-md font-thin mb-4 text-white">
-                    {data.company}
-                  </div>
-                  <ul className="list-decimal ml-4">
+
+                  <ul className="list-decimal ml-4 sm:text-base sm:font-thin font-normal text-sm">
                     {data.description.map((desc, index) => (
                       <li key={index}> {desc}</li>
                     ))}
