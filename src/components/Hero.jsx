@@ -14,7 +14,7 @@ const ShimmerPlaceholder = () => (
 function Hero() {
   const [text] = useTypewriter({
     words: [
-      "Fullstack Developer",
+      "Full-Stack Developer",
       "Machine Learning Engineer",
       "Tech Enthusiast",
     ],
@@ -28,7 +28,7 @@ function Hero() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 0.5, delay: delay },
+      transition: { duration: 0.7, delay: delay },
     },
   });
   const newTab = (url) => {
