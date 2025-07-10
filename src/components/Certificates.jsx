@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { CERTIFICATE } from "../constants";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+// Make sure to import the effect's CSS if you use one
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ShimmerPlaceholder = () => (
   <div className="w-full sm:h-[230px] h-[200px] rounded-3xl bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse" />
@@ -19,7 +21,7 @@ const Certificates = () => {
     "Course",
     "Work",
     "Committee",
-    "Competition",
+    "Achievement",
   ];
 
   const handleFilterButtonClick = (selectedCategory) => {
@@ -29,19 +31,18 @@ const Certificates = () => {
   };
 
   useEffect(() => {
+    const filterItems = () => {
+      if (selectedFilter) {
+        const tempItems = CERTIFICATE.filter(
+          (data) => data.category === selectedFilter
+        );
+        setFilteredItems(tempItems);
+      } else {
+        setFilteredItems(CERTIFICATE);
+      }
+    };
     filterItems();
   }, [selectedFilter]);
-
-  const filterItems = () => {
-    if (selectedFilter) {
-      const tempItems = CERTIFICATE.filter(
-        (data) => data.category === selectedFilter
-      );
-      setFilteredItems(tempItems);
-    } else {
-      setFilteredItems(CERTIFICATE);
-    }
-  };
 
   const [modal, setModal] = useState(false);
   const [tempData, setTempData] = useState([]);
@@ -102,9 +103,9 @@ const Certificates = () => {
             viewport={{ once: true }}
           >
             <div className="md:text-5xl text-4xl font-bold md:mt-16 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 ">
-              Certifications
+              Certificates
             </div>
-            <div className="buttons-container flex justify-center mx-12 gap-3">
+            <div className="buttons-container flex flex-wrap justify-center mx-2 gap-2">
               {filters.map((category, index) => (
                 <button
                   onClick={() => handleFilterButtonClick(category)}
@@ -137,20 +138,16 @@ const Certificates = () => {
                     className="card2 hover:bg-gradient-to-tr hover:from-indigo-600/20 w-full rounded-[36px] sm:h-[480px] h-[400px] bg-gradient-to-b from-black/50 border-[0.5px] border-slate-300/50 backdrop-filter backdrop-blur-4xl flex sm:mb-2 mb-12"
                   >
                     <div className="p-4 flex flex-col">
+                      {/* CORRECTED LAZY LOAD IMPLEMENTATION */}
                       <button onClick={() => getData(data.image, data.title)}>
-                        <div className="rounded-3xl overflow-hidden w-full object-cover sm:h-[230px] h-full bg-slate-500">
-                          <div className="relative sm:h-[230px] h-[200px] w-full rounded-3xl overflow-hidden bg-slate-500">
-                            {/* Shimmer */}
-                            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse z-0" />
-
-                            {/* LazyLoadImage */}
-                            <LazyLoadImage
-                              src={data.image}
-                              alt={data.title}
-                              effect="opacity"
-                              className="object-cover w-full h-full z-10 relative"
-                            />
-                          </div>
+                        <div className="rounded-3xl overflow-hidden w-full sm:h-[230px] h-[200px] bg-slate-700">
+                          <LazyLoadImage
+                            src={data.image}
+                            alt={data.title}
+                            placeholder={<ShimmerPlaceholder />}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            effect="blur"
+                          />
                         </div>
                       </button>
 
@@ -175,20 +172,16 @@ const Certificates = () => {
                     className="card2 w-[360px] hover:bg-gradient-to-tr hover:from-indigo-600/20 rounded-[36px] sm:h-[480px] h-[400px] bg-gradient-to-b from-black/50 border-[0.5px] border-slate-300/50 backdrop-filter backdrop-blur-4xl flex"
                   >
                     <div className="p-4 flex flex-col">
+                      {/* CORRECTED LAZY LOAD IMPLEMENTATION */}
                       <button onClick={() => getData(data.image, data.title)}>
-                        <div className="rounded-3xl overflow-hidden w-full object-cover sm:h-[230px] h-full">
-                          <div className="relative sm:h-[230px] h-[200px] w-full rounded-3xl overflow-hidden bg-slate-500">
-                            {/* Shimmer */}
-                            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse z-0" />
-
-                            {/* LazyLoadImage */}
-                            <LazyLoadImage
-                              src={data.image}
-                              alt={data.title}
-                              effect="opacity"
-                              className="object-cover w-full h-full z-10 relative"
-                            />
-                          </div>
+                        <div className="rounded-3xl overflow-hidden w-full sm:h-[230px] h-[200px] bg-slate-700">
+                          <LazyLoadImage
+                            src={data.image}
+                            alt={data.title}
+                            placeholder={<ShimmerPlaceholder />}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            effect="blur"
+                          />
                         </div>
                       </button>
 

@@ -108,7 +108,7 @@ function Hero() {
             alt="Profile"
             effect="opacity"
             placeholder={<ShimmerPlaceholder />}
-            className="w-[350px] lg:w-[450px] md:w-[350px] sm absolute z-[10] lg:-ml-12 md:-ml-5 -ml-10"
+            className="w-[350px] lg:w-[450px] md:w-[350px] sm absolute z-[10] lg:-ml-[50px] md:-ml-5 -ml-10"
           />
           <img
             src={circle}

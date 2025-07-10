@@ -18,37 +18,29 @@ const Projects = () => {
   ];
 
   const handleFilterButtonClick = (selectedCategory) => {
-    // Toggle the filter: if it's already selected, set it to null (deselect), otherwise set it as the selected filter
     setSelectedFilter(
       selectedFilter === selectedCategory ? null : selectedCategory
     );
   };
-  const container = (delay) => ({
-    hidden: { y: -100, opacity: 0 },
-    whileInView: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5, delay: delay },
-    },
-  });
 
   useEffect(() => {
+    const filterItems = () => {
+      if (selectedFilter) {
+        const tempItems = PROJECTS.filter(
+          (project) => project.category === selectedFilter
+        );
+        setFilteredItems(tempItems);
+      } else {
+        setFilteredItems(PROJECTS);
+      }
+    };
     filterItems();
   }, [selectedFilter]);
 
-  const filterItems = () => {
-    if (selectedFilter) {
-      const tempItems = PROJECTS.filter(
-        (project) => project.category === selectedFilter
-      );
-      setFilteredItems(tempItems);
-    } else {
-      setFilteredItems(PROJECTS);
-    }
-  };
   const newTab = (url) => {
-    window.open(url);
+    window.open(url, "_blank"); // It's good practice to open external links in a new tab
   };
+
   return (
     <section id="projects">
       <div className="flex flex-col max-w-[1150px] mx-auto min-h-[100vh] sm:pt-[20px] pt-0">
@@ -61,7 +53,7 @@ const Projects = () => {
           <div className="md:text-5xl text-4xl font-bold md:mt-16 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-br from-white p-2">
             Projects
           </div>
-          <div className="buttons-container flex justify-center mx-4 gap-3">
+          <div className="buttons-container flex flex-wrap justify-center mx-4 gap-3">
             {filters.map((category, index) => (
               <button
                 key={`filters-${index}`}
@@ -91,6 +83,7 @@ const Projects = () => {
               <div className=" hover:-translate-y-4 hover:scale-100 card  lg:h-[full]  md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px] bg-gradient-to-b from-black/30 from-60% to-white/5 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center">
                 <div className="flex justify-between flex-col ">
                   <div className="p-4 sm:p-5 flex flex-col ">
+                    {/* CORRECTED LAZY LOAD IMPLEMENTATION */}
                     <div className="rounded-3xl overflow-hidden md:h-48 lg:h-64 h-full min-h-[192px]">
                       <LazyLoadImage
                         className="object-cover hover:scale-105 w-full h-full"

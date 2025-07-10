@@ -11,7 +11,7 @@ body {
   background-repeat: none;
   overflow-x: hidden;
 }
-.slick-slide > div {  
+.slick-slide > div {
   margin: 0 10px;
 }
 
@@ -311,4 +311,7 @@ h1 {
 }
 .card2 {
   box-shadow: inset 10px 20px 90px rgba(255, 255, 255, 0.2);
+}
+.slick-dots {
+  bottom: -50px !important; /* Adjust this value as needed */
 }

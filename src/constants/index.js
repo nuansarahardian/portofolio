@@ -329,7 +329,7 @@ export const CERTIFICATE = [
     company: "BPTI Puspernas",
     year: "2024",
     image: "images/gemastik.png",
-    category: "Competition",
+    category: "Achievement",
   },
   {
     title: "Staf of Media Information and Communication Departement",
