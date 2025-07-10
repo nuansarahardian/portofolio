@@ -5,13 +5,18 @@ import circle from "../assets/circle.png";
 import { HERO_CONTENT } from "../constants";
 import bgporto from "../assets/bgporto.png";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+const ShimmerPlaceholder = () => (
+  <div className="absolute  z-[10] w-[350px] h-[350px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] rounded-full bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse" />
+);
 
 function Hero() {
   const [text] = useTypewriter({
     words: [
       "Fullstack Developer",
       "Machine Learning Engineer",
-      "Tech Enthusiast"
+      "Tech Enthusiast",
     ],
     loop: {},
     typeSpeed: 120,
@@ -97,10 +102,13 @@ function Hero() {
           transition={{ duration: 0.6, delay: 1 }}
           className="md:ml-0 md:mt-12 lg:ml-[100px] md:place-content-center z-[-10] md:order-2 order-1 flex justify-center md:mb-32"
         >
-          <img
+          {" "}
+          <LazyLoadImage
             src={profilepic}
-            className="w-[350px] lg:w-[450px] md:w-[350px] sm absolute z-[10]"
             alt="Profile"
+            effect="opacity"
+            placeholder={<ShimmerPlaceholder />}
+            className="w-[350px] lg:w-[450px] md:w-[350px] sm absolute z-[10] lg:-ml-12 md:-ml-5 -ml-10"
           />
           <img
             src={circle}

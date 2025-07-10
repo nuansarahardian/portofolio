@@ -7,6 +7,10 @@ import { CERTIFICATE } from "../constants";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
+const ShimmerPlaceholder = () => (
+  <div className="w-full sm:h-[230px] h-[200px] rounded-3xl bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse" />
+);
+
 const Certificates = () => {
   const [selectedFilter, setSelectedFilter] = useState(null);
   const [filteredItems, setFilteredItems] = useState(CERTIFICATE);
@@ -135,7 +139,13 @@ const Certificates = () => {
                     <div className="p-4 flex flex-col">
                       <button onClick={() => getData(data.image, data.title)}>
                         <div className="rounded-3xl overflow-hidden w-full object-cover sm:h-[230px] h-full bg-slate-500">
-                          <img className=" hover:scale-105" src={data.image} />
+                          <LazyLoadImage
+                            className="hover:scale-105 object-cover w-full h-full"
+                            src={data.image}
+                            alt={data.title}
+                            effect="opacity"
+                            placeholder={<ShimmerPlaceholder />}
+                          />
                         </div>
                       </button>
 
@@ -162,7 +172,13 @@ const Certificates = () => {
                     <div className="p-4 flex flex-col">
                       <button onClick={() => getData(data.image, data.title)}>
                         <div className="rounded-3xl overflow-hidden w-full object-cover sm:h-[230px] h-full">
-                          <img className=" hover:scale-105 " src={data.image} />
+                          <LazyLoadImage
+                            className="hover:scale-105 object-cover w-full h-full"
+                            src={data.image}
+                            alt={data.title}
+                            effect="opacity"
+                            placeholder={<ShimmerPlaceholder />}
+                          />
                         </div>
                       </button>
 

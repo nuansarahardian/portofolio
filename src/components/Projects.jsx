@@ -3,6 +3,10 @@ import { PROJECTS } from "../constants";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 
+const ShimmerPlaceholder = () => (
+  <div className="w-full h-full rounded-3xl bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse" />
+);
+
 const Projects = () => {
   const [selectedFilter, setSelectedFilter] = useState(null); // State to hold a single selected filter
   const [filteredItems, setFilteredItems] = useState(PROJECTS);
@@ -87,12 +91,13 @@ const Projects = () => {
               <div className=" hover:-translate-y-4 hover:scale-100 card  lg:h-[full]  md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px] bg-gradient-to-b from-black/30 from-60% to-white/5 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center">
                 <div className="flex justify-between flex-col ">
                   <div className="p-4 sm:p-5 flex flex-col ">
-                    <div className="rounded-3xl overflow-hidden  md:h-48 lg:h-64 h-full ">
+                    <div className="rounded-3xl overflow-hidden md:h-48 lg:h-64 h-full min-h-[192px]">
                       <LazyLoadImage
-                        className="object-cover hover:scale-105"
+                        className="object-cover hover:scale-105 w-full h-full"
                         src={project.image}
-                        sizes="(max-width: 800px) 100vw,50vw"
                         alt={project.title}
+                        effect="opacity"
+                        placeholder={<ShimmerPlaceholder />}
                       />
                     </div>
 

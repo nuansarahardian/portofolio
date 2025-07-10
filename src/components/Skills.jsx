@@ -51,12 +51,13 @@ const Skills = () => {
             className="hover:bg-gradient-to-tr hover:from-indigo-600/20 font-normal  md:col-span-6 col-span-2 card content drop-shadow-md h-fit my-auto p-[28px]  rounded-[32px]    sm:mr-0 bg-gradient-to-b from-slate-100/10 to-black/20 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl "
           >
             <p className="text-transparent leading-relaxed bg-clip-text bg-gradient-to-br from-white lg:text-[18px] md:text-[16px] text-sm text-justify">
-              I'm passionate about <b>UI/UX design</b>, focused on creating
-              intuitive and visually appealing products that meet user needs
-              through detailed research. I also enjoy{" "}
-              <b>Front-End Web Development</b>, using React JS and Framer Motion
-              to build dynamic, interactive apps with smooth animations and
-              responsive designs.
+              <b> Software Developer</b> with a focus on{" "}
+              <b>full-stack web development</b> and experience delivering
+              end-to-end systems—from planning and API integration to database
+              management, deployment, and maintenance. Skilled in
+              cross-functional collaboration, system documentation, and
+              technical troubleshooting. Passionate about machine learning and
+              UI/UX, and quick to adapt to new technologies and challenges.
             </p>
           </motion.div>
           <motion.div
