@@ -5,7 +5,7 @@
 // import project5 from "../assets/portofolio5.png";
 
 export const HERO_CONTENT = `
-Passionate Front-end Web Developer and UI/UX Designer, turning visions into reality with sleek, user-focused design and development.`;
+Versatile Fullstack Developer with a passion for UI/UX, data, and machine learning—turning ideas into functional, data-driven digital products with user-centered design.`;
 
 export const sectionIds = [
   "home",
@@ -23,6 +23,9 @@ export const SKILL = [
     image: "https://skillicons.dev/icons?i=javascript",
   },
   {
+    image: "https://skillicons.dev/icons?i=typescript",
+  },
+  {
     image: "https://skillicons.dev/icons?i=react&theme=",
   },
   {
@@ -37,8 +40,13 @@ export const SKILL = [
   {
     image: "https://skillicons.dev/icons?i=flutter",
   },
+
   {
-    image: "https://skillicons.dev/icons?i=nextjs",
+    image: "https://skillicons.dev/icons?i=expressjs",
+  },
+
+  {
+    image: "https://skillicons.dev/icons?i=python",
   },
 ];
 export const TOOLS = [
@@ -48,6 +56,17 @@ export const TOOLS = [
   {
     image: "https://skillicons.dev/icons?i=firebase",
   },
+
+  {
+    image: "https://skillicons.dev/icons?i=github",
+  },
+
+  {
+    image: "https://skillicons.dev/icons?i=vscode",
+  },
+  {
+    image: "https://skillicons.dev/icons?i=mongodb",
+  },
   {
     image: "https://skillicons.dev/icons?i=postman",
   },
@@ -55,17 +74,34 @@ export const TOOLS = [
     image: "https://skillicons.dev/icons?i=git",
   },
   {
-    image: "https://skillicons.dev/icons?i=github",
-  },
-  {
-    image: "https://skillicons.dev/icons?i=illustrator",
-  },
-  {
-    image: "https://skillicons.dev/icons?i=vscode",
+    image: "https://skillicons.dev/icons?i=docker",
   },
 ];
 
 export const WORK_EXPERIENCES = [
+  {
+    year: "Feb 2025 - May 2025",
+    role: "Embedded System Laboratory Assistant",
+    company: "Informatics Laboratory Assistant",
+    description: [
+      "Guided 30+ students (2 classes) across 12 lab sessions covering device assembly, coding, and debugging of microcontroller-based systems (NodeMCU).",
+      "Designed exam questions and assignments, and assessed student performance to evaluate understanding of embedded systems.",
+    ],
+    technologies: ["Linux", "Windows"],
+    logo: "images/laboratory.png",
+  },
+  {
+    year: "Sep 2024 - Dec 2025",
+    role: "Full-Stack Developer",
+    company: "BSKLN, Ministry of Foreign Affairs of the Republic of Indonesia",
+    description: [
+      " Developed 3 web applications using Laravel, React, and MySQL: Investolink (export-import & investment data), E-Magang (internship management system for the Ministry of Foreign Affairs), and Diplomatic Economic Information System (data management & public API).",
+      "Designed exam questions and assignments, and assessed student performance to evaluate understanding of embedded systems.",
+      "Led communication and team coordination between stakeholders and 20 interns (tribe). ",
+    ],
+    technologies: ["Linux", "Windows"],
+    logo: "images/kemlu.png",
+  },
   {
     year: "Feb 2024 - May 2024",
     role: "Operating Systems Laboratory Assistant",
@@ -89,6 +125,20 @@ export const WORK_EXPERIENCES = [
     ],
     technologies: ["WordPress", "Figma", "PHP", "Yii2"],
     logo: "images/dinarpus.png",
+  },
+];
+export const BOOTCAMP = [
+  {
+    year: "Feb 2025 - Jun 2025",
+    role: "Machine Learning Engineer Cohort",
+    company: "Coding Camp 2025 powered by DBS Foundation",
+    description: [
+      "Participated in an intensive scholarship program equivalent to 20 academic credits (936 hours), covering 12 courses on Python, machine learning, data analysis, and deployment via Dicoding platform.",
+      "Enhanced soft skills through weekly mentoring, English training, financial literacy, and career development sessions.",
+      "Developed an NLP chatbot model using LSTM for intent classification and integrated it into a web-based application.",
+    ],
+    technologies: ["Linux", "Windows"],
+    logo: "images/dbs.png",
   },
 ];
 export const ORGANIZATION = [
@@ -156,6 +206,51 @@ export const PROJECTS = [
     category: "Web Development",
     link: "https://github.com/maulanazh15/siperba-ver2",
   },
+  {
+    title: "E-Magang BSKLN Kemlu RI",
+    image: "images/portofolio6.png",
+    description:
+      "Built an internal system to manage internship applications, participant tracking, and administrative workflows",
+    technologies: ["Laravel", "Inertia", "React", "Tailwind", "MySQL"],
+    category: "Web Development",
+    link: "https://github.com/nuansarahardian/e-magang-kemlu",
+  },
+  {
+    title: "Investolink",
+    image: "images/portofolio7.png",
+    description:
+      "Developed a data visualization platform to support Indonesian diplomats in promoting national investment opportunities abroad, by providing structured access to export-import and regional potential data.",
+    technologies: ["Laravel", "Inertia", "React", "Tailwind", "MySQL"],
+    category: "Web Development",
+    link: "https://github.com/nuansarahardian/investolink",
+  },
+  {
+    title: "Economic Diplomacy Information System",
+    image: "images/portofolio8.png",
+    description:
+      "Developed a centralized data management system for Indonesia's economic diplomacy, enabling secure access to strategic data and internal communication via dashboard and API.",
+    technologies: ["Laravel", "MySQL"],
+    category: "Web Development",
+    link: "https://github.com/nuansarahardian/data-management-bskln",
+  },
+  {
+    title: "Pulih Hati - Chatbot",
+    image: "images/portofolio9.png",
+    description:
+      "Engineered a mental health chatbot model tailored for Gen Z users, enabling automated conversation and emotional support through intent classification and contextual responses.",
+    technologies: ["Python", "Flask", "Express JS", "Node JS"],
+    category: "Machine Learning",
+    link: "https://pulih-hati-frontend.vercel.app/",
+  },
+  {
+    title: "OCR-Based e-KTP Data Extraction System",
+    image: "images/portofolio10.png",
+    description:
+      "Created an intelligent document processing system that extracts structured personal information from Indonesian ID cards, automating identity input in digital forms.",
+    technologies: ["Flask", "Laravel", "React", "Tailwind", "MySQL"],
+    category: "Machine Learning",
+    link: "https://github.com/nuansarahardian/flask_ocr_cnn_model",
+  },
 
   {
     title: "UnsoedFess",
@@ -170,7 +265,7 @@ export const PROJECTS = [
     title: "Genggam App - Study Case",
     image: "images/portofolio5.png",
     description:
-      "A platform for elderly people, , focusing on physical limitations and visual impairments",
+      "A platform for elderly people, focusing on physical limitations and visual impairments",
     technologies: ["Figma"],
     category: "UI/UX Design",
     link: "https://docs.google.com/presentation/d/1Pc7soPokuYnlYinP0GJiM5Ix120vdGRwjyK6wsFCjw4/edit#slide=id.p",
@@ -207,6 +302,41 @@ export const CERTIFICATE = [
     year: "2023",
     image: "images/perpusda.png",
     category: "Work",
+  },
+  {
+    title: "Full-Stack Developer",
+    company: "BSKLN, Ministry of Foreign Affairs of the Republic of Indonesia",
+    year: "2024",
+    image: "images/bskln.png",
+    category: "Work",
+  },
+  {
+    title: "MSIB Batch 7 Participant  ",
+    company: "Kemendikbudristek",
+    year: "2024",
+    image: "images/msib.png",
+    category: "Work",
+  },
+  {
+    title: "Tribe MSIB Batch 7",
+    company: "Kemendikbudristek",
+    year: "2024",
+    image: "images/tribe.png",
+    category: "Work",
+  },
+  {
+    title: "GEMASTIK Finalist, UI/UX Design Division",
+    company: "BPTI Puspernas",
+    year: "2024",
+    image: "images/gemastik.png",
+    category: "Competition",
+  },
+  {
+    title: "Staf of Media Information and Communication Departement",
+    company: "GenBI (Generasi Baru Indonesia) Purwokerto",
+    year: "2024-2025",
+    image: "images/genbipwt.png",
+    category: "Organization",
   },
   {
     title: "Belajar Dasar UX Design",
@@ -303,6 +433,13 @@ export const CERTIFICATE = [
     company: "Informatics Laboratory Assistant",
     year: "2024",
     image: "images/asprak.png",
+    category: "Work",
+  },
+  {
+    title: "Embedded System Laboratory Assistant",
+    company: "Informatics Laboratory Assistant",
+    year: "2025",
+    image: "images/pst.png",
     category: "Work",
   },
   {

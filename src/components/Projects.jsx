@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const [selectedFilter, setSelectedFilter] = useState(null); // State to hold a single selected filter
   const [filteredItems, setFilteredItems] = useState(PROJECTS);
-  const filters = ["Web Development", "Mobile Development", "UI/UX Design"];
+  const filters = [
+    "Web Development",
+    "Mobile Development",
+    "UI/UX Design",
+    "Machine Learning",
+  ];
 
   const handleFilterButtonClick = (selectedCategory) => {
     // Toggle the filter: if it's already selected, set it to null (deselect), otherwise set it as the selected filter
@@ -76,10 +81,10 @@ const Projects = () => {
               initial={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="relative group"
+              className="relative group "
             >
-              <div className="lg:h-[full] md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px]  -inset-1  absolute bg-gradient-to-br from-indigo-500  blur opacity-0 group-hover:opacity-50 group-hover:scale-105 transition duration-300"></div>
-              <div className=" card  lg:h-[full]  md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px] bg-gradient-to-b from-black/30 from-60% to-white/5 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center">
+              <div className=" lg:h-[full] md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px]  -inset-1  absolute bg-gradient-to-br from-indigo-500  blur opacity-0 group-hover:opacity-50 group-hover:scale-105 transition duration-300"></div>
+              <div className=" hover:-translate-y-4 hover:scale-100 card  lg:h-[full]  md:h-full h-fit m-auto w-[95%]  sm:rounded-[40px] rounded-[36px] bg-gradient-to-b from-black/30 from-60% to-white/5 border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center">
                 <div className="flex justify-between flex-col ">
                   <div className="p-4 sm:p-5 flex flex-col ">
                     <div className="rounded-3xl overflow-hidden  md:h-48 lg:h-64 h-full ">

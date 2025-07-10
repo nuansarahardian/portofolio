@@ -3,7 +3,7 @@ import React from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "../timeline.css";
-import { ORGANIZATION, WORK_EXPERIENCES } from "../constants";
+import { ORGANIZATION, WORK_EXPERIENCES, BOOTCAMP } from "../constants";
 import { motion } from "framer-motion";
 import dinarpus from "../assets/dinarpus.png";
 // import "react-vertical-timeline-component/style.min.css";
@@ -25,9 +25,56 @@ function Experiences() {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -40 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="md:text-3xl text-2xl font-medium md:mt-8 mt-2 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-br from-white p-2  "
+        >
+          Professional Experiences
+        </motion.div>
+
+        <div className="max-w-[1300px] m-auto flex flex-wrap relative mb-20">
+          {/* <div className="absolute w-[2px] h-[100%] bg-white sm:left-[calc(50%-1px)] left-[7px] mt-5"></div> */}
+          {/* item1 */}
+          <VerticalTimeline>
+            {WORK_EXPERIENCES.map((data, key) => (
+              <VerticalTimelineElement key={key} date={data.year}>
+                {/* <div className="relative w-[100%] mb-[40px] sm:pr-[calc(50%+30px)] pr-0 mt-10">
+                  <div className="dot absolute bg-white h-[16px] w-[16px] rounded-full sm:left-[calc(50%-8px)] left-0 mt-4"></div> */}
+                {/* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
+                    {data.year}
+                  </div> */}
+                <div className=" hover:scale-100 hover:bg-gradient-to-tr hover:from-indigo-600/20 content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
+                  <div className="flex gap-4 items-center ">
+                    <div className="mb-4 drop-shadow-md h-full p-[12px]  rounded-3xl  mt-[0px]  bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
+                      <img className="max-w-16 h-16 " src={data.logo} alt="" />
+                    </div>
+                    <div>
+                      <div className="sm:text-[22px] leading-tight mb-1 text-lg font-bold   text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">
+                        {data.role}
+                      </div>
+                      <div className="text-sm font-semibold mb-4 text-white/70">
+                        {data.company}
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul className="list-decimal ml-4 sm:text-base sm:font-thin font-normal text-sm">
+                    {data.description.map((desc, index) => (
+                      <li key={index}> {desc}</li>
+                    ))}
+                  </ul>
+                </div>
+                {/* </div> */}
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -40 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
-          className="md:text-3xl text-xl font-medium md:mt-0 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 "
+          className="md:text-3xl text-2xl font-medium md:mt-0 md:mb-10  flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 "
         >
           Orgazinational Experiences
         </motion.div>
@@ -42,7 +89,7 @@ function Experiences() {
                 {/* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
                     {data.year}
                   </div> */}
-                <div className=" hover:bg-gradient-to-tr hover:from-indigo-600/20 content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
+                <div className=" hover:scale-100 hover:bg-gradient-to-tr hover:from-indigo-600/20 content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
                   <div className="flex gap-4 items-center">
                     <div className="mb-4 drop-shadow-md h-full p-[12px]  rounded-3xl mt-[0px]  bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card">
                       <img className="max-w-16 h-16" src={data.logo} alt="" />
@@ -71,28 +118,27 @@ function Experiences() {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -40 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
           viewport={{ once: true }}
-          className="md:text-3xl text-xl font-medium md:mt-16 mt-12 md:mb-10 flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-br from-white p-2  "
+          className="md:text-3xl text-3xl font-medium md:mt-0 md:mb-4  flex justify-center text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white p-2 pt-20"
         >
-          Professional Experiences
+          Bootcamp
         </motion.div>
-
-        <div className="max-w-[1300px] m-auto flex flex-wrap relative">
+        <div className="max-w-[1300px] m-auto flex flex-wrap relative ">
           {/* <div className="absolute w-[2px] h-[100%] bg-white sm:left-[calc(50%-1px)] left-[7px] mt-5"></div> */}
           {/* item1 */}
           <VerticalTimeline>
-            {WORK_EXPERIENCES.map((data, key) => (
+            {BOOTCAMP.map((data, key) => (
               <VerticalTimelineElement key={key} date={data.year}>
                 {/* <div className="relative w-[100%] mb-[40px] sm:pr-[calc(50%+30px)] pr-0 mt-10">
                   <div className="dot absolute bg-white h-[16px] w-[16px] rounded-full sm:left-[calc(50%-8px)] left-0 mt-4"></div> */}
                 {/* <div className="absolute mb-4 pl-3 pr-3 pt-2 pb-2 mr-3 sm:left-[calc(50%+20px)] left-8 md:text-base text-sm rounded-xl   border-[0.5px] border-slate-100/50 backdrop-filter backdrop-blur-4xl text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-200 hover:scale-[1.1]">
                     {data.year}
                   </div> */}
-                <div className=" hover:bg-gradient-to-tr hover:from-indigo-600/20 content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
-                  <div className="flex gap-4 items-center ">
-                    <div className="mb-4 drop-shadow-md h-full p-[12px]  rounded-3xl  mt-[0px]  bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
-                      <img className="max-w-16 h-16 " src={data.logo} alt="" />
+                <div className=" hover:scale-100 hover:bg-gradient-to-tr hover:from-indigo-600/20 content drop-shadow-md h-full p-[24px]  rounded-3xl sm:mt-[15px] mt-[0px] mr-4 sm:mr-0 bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card ">
+                  <div className="flex gap-4 items-center">
+                    <div className="mb-4 drop-shadow-md h-full p-[12px]  rounded-3xl mt-[0px]  bg-gradient-to-b from-white/10 to-black/25 border-[0.5px] border-white/20 backdrop-filter backdrop-blur-4xl card">
+                      <img className="max-w-16 h-16" src={data.logo} alt="" />
                     </div>
                     <div>
                       <div className="sm:text-[22px] leading-tight mb-1 text-lg font-bold   text-transparent bg-clip-text tracking-wide bg-gradient-to-r from-white">

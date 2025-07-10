@@ -8,7 +8,11 @@ import { motion } from "framer-motion";
 
 function Hero() {
   const [text] = useTypewriter({
-    words: ["Front-End Engineer", "UI/UX Designer"],
+    words: [
+      "Fullstack Developer",
+      "Machine Learning Engineer",
+      "Tech Enthusiast"
+    ],
     loop: {},
     typeSpeed: 120,
     deleteSpeed: 80,

@@ -10,7 +10,13 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const Certificates = () => {
   const [selectedFilter, setSelectedFilter] = useState(null);
   const [filteredItems, setFilteredItems] = useState(CERTIFICATE);
-  const filters = ["Organization", "Course", "Work", "Committee"];
+  const filters = [
+    "Organization",
+    "Course",
+    "Work",
+    "Committee",
+    "Competition",
+  ];
 
   const handleFilterButtonClick = (selectedCategory) => {
     setSelectedFilter(

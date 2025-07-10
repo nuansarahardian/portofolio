@@ -11,7 +11,7 @@ body {
   background-repeat: none;
   overflow-x: hidden;
 }
-.slick-slide > div {
+.slick-slide > div {  
   margin: 0 10px;
 }
 
