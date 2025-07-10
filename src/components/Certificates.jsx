@@ -139,13 +139,18 @@ const Certificates = () => {
                     <div className="p-4 flex flex-col">
                       <button onClick={() => getData(data.image, data.title)}>
                         <div className="rounded-3xl overflow-hidden w-full object-cover sm:h-[230px] h-full bg-slate-500">
-                          <LazyLoadImage
-                            className="hover:scale-105 object-cover w-full h-full"
-                            src={data.image}
-                            alt={data.title}
-                            effect="opacity"
-                            placeholder={<ShimmerPlaceholder />}
-                          />
+                          <div className="relative sm:h-[230px] h-[200px] w-full rounded-3xl overflow-hidden bg-slate-500">
+                            {/* Shimmer */}
+                            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse z-0" />
+
+                            {/* LazyLoadImage */}
+                            <LazyLoadImage
+                              src={data.image}
+                              alt={data.title}
+                              effect="opacity"
+                              className="object-cover w-full h-full z-10 relative"
+                            />
+                          </div>
                         </div>
                       </button>
 
@@ -172,13 +177,18 @@ const Certificates = () => {
                     <div className="p-4 flex flex-col">
                       <button onClick={() => getData(data.image, data.title)}>
                         <div className="rounded-3xl overflow-hidden w-full object-cover sm:h-[230px] h-full">
-                          <LazyLoadImage
-                            className="hover:scale-105 object-cover w-full h-full"
-                            src={data.image}
-                            alt={data.title}
-                            effect="opacity"
-                            placeholder={<ShimmerPlaceholder />}
-                          />
+                          <div className="relative sm:h-[230px] h-[200px] w-full rounded-3xl overflow-hidden bg-slate-500">
+                            {/* Shimmer */}
+                            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse z-0" />
+
+                            {/* LazyLoadImage */}
+                            <LazyLoadImage
+                              src={data.image}
+                              alt={data.title}
+                              effect="opacity"
+                              className="object-cover w-full h-full z-10 relative"
+                            />
+                          </div>
                         </div>
                       </button>
 
