@@ -366,6 +366,13 @@ export const CERTIFICATE = [
     image: "images/javascript.png",
     category: "Course",
   },
+  {
+    title: "Coding Camp 2025 powered by DBS Foundation ",
+    company: "DBS Foundation x Dicoding ",
+    year: "2025",
+    image: "images/codingcamp.jpg",
+    category: "Work",
+  },
   // {
   //   title: "Operating Systems Laboratory Assistant",
   //   company: "Informatics Laboratory Assistant",
