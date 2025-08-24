@@ -56,7 +56,7 @@ function Navbar() {
 
   return (
     <Headroom>
-      <div className="flex justify-center items-center w-full z-[999]">
+      <div className="flex justify-center items-center w-full z-[1000]">
         <div
           className="navbar top-0 z-[999] w-[100%] flex text-xl justify-between text-slate-700 items-center sm:px-20 md:px-44 px-12 h-[80px]
         bg-gradient-to-t from-indigo-100/10 border-b-[1px] sm:border-b-[0.5px] rounded-none border-blue-200/50 backdrop-filter backdrop-blur-xl drop-shadow-3xl"

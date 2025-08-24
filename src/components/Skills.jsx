@@ -98,8 +98,8 @@ const Skills = () => {
                 <p className="font-normal md:text-[18px] text-sm">
                   Jenderal Soedirman University
                 </p>
-                <p className="font-bold md:text-[18px] text-sm">
-                  S1 Informatics, class of 2021
+                <p className="font-bold md:text-[18px] text-sm mt-2">
+                  Bachelor of Informatics (Computer Science)
                 </p>
               </div>
             </div>

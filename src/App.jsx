@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 import { ClipLoader } from "react-spinners";
 import { HashLoader } from "react-spinners";
 import { MoonLoader } from "react-spinners";
-
+import Lanyard from "./components/Lanyard/Lanyard";
 export default function App() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {

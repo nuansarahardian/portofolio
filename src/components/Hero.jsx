@@ -1,15 +1,22 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import profilepic from "../assets/profilepic.png";
-import circle from "../assets/circle.png";
 import { HERO_CONTENT } from "../constants";
 import bgporto from "../assets/bgporto.png";
 import { motion } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import Lanyard from "./Lanyard/Lanyard";
 
-const ShimmerPlaceholder = () => (
-  <div className="absolute  z-[10] w-[350px] h-[350px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] rounded-full bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 animate-pulse" />
-);
+const container = (delay) => ({
+  hidden: { x: -100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.7, delay: delay },
+  },
+});
+
+const newTab = (url) => {
+  window.open(url);
+};
 
 function Hero() {
   const [text] = useTypewriter({
@@ -23,37 +30,27 @@ function Hero() {
     deleteSpeed: 80,
   });
 
-  const container = (delay) => ({
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.7, delay: delay },
-    },
-  });
-  const newTab = (url) => {
-    window.open(url);
-  };
   return (
-    <section id="home" className="sm:min-h-screen sm:mb-10 mb-20 relative">
+    <section id="home" className="relative w-full min-h-screen">
       <img
-        className="absolute z-[-1000] sm:opacity-20 opacity-60 sm:min-h-screen object-cover"
+        className="absolute inset-0 z-[-1000] w-full h-full object-cover sm:opacity-20 opacity-60"
         src={bgporto}
-        alt=""
+        alt="Background"
       />
-      <div className="grid md:grid-cols-2 max-w-[1350px] mx-auto sm:pt-12  min-h-fit">
-        <div className="max-w-[700px] place-content-center ml-10 md:ml-[100px] mr-8 order-2 mt-6">
-          {/* Animasi teks dengan motion */}
+      <div className="grid md:grid-cols-2 max-w-[1350px] mx-auto min-h-screen">
+        {/* === KOLOM KIRI (TEKS) === */}
+        <div className="flex flex-col justify-center p-4 md:p-8">
+          {/* ... (Konten teks Anda tidak berubah) ... */}
           <div className="text-center md:text-left">
             <motion.div
               variants={container(0)}
               initial="hidden"
               animate="visible"
             >
-              <p className="lg:text-3xl text-lg sm:mb-2 mb:0 font-medium text-transparent bg-clip-text bg-gradient-to-r from-white">
+              <p className="lg:text-3xl text-lg sm:mb-2 font-medium text-transparent bg-clip-text bg-gradient-to-r from-white">
                 Hello, It's me!
               </p>
-              <p className="lg:text-[56px] text-4xl font-medium leading-none text-transparent bg-clip-text bg-gradient-to-r from-white">
+              <p className="lg:text-[56px] text-4xl font-medium leading-none text-white">
                 Nuansa Rahardian
               </p>
             </motion.div>
@@ -67,17 +64,16 @@ function Hero() {
               <Cursor cursorColor="white" />
             </motion.div>
           </div>
-
           <motion.div
             variants={container(1)}
             initial="hidden"
             animate="visible"
+            className="text-center md:text-left"
           >
-            <p className="text-neutral-300 sm:mr-6 font-normal text-sm md:text-md text-center md:text-left">
+            <p className="text-neutral-300 mt-4 font-normal text-sm md:text-md">
               {HERO_CONTENT}
             </p>
-
-            <div className="flex flex-row sm:mb-0 md:justify-normal justify-center mt-6">
+            <div className="flex flex-row md:justify-start justify-center mt-6">
               <button
                 onClick={() =>
                   newTab(
@@ -86,8 +82,8 @@ function Hero() {
                 }
                 className="card relative group lg:w-[180px] md:w-48 sm:h-12 h-12 place-content-center justify-center items-center flex pl-3 pr-3 sm:pr-0 sm:pl-0 pt-2 pb-2 mr-3 text-xl rounded-2xl border-[0.5px] border-slate-100/40 bg-gradient-to-br backdrop-filter backdrop-blur-lg from-gray-800/90 hover:scale-105 hover:bg-slate-300/10"
               >
-                <div className="  sm:rounded-[36px] rounded-[28px]  -inset-1  absolute bg-gradient-to-br from-indigo-500  blur-md backdrop-blur-md sm:opacity-10 opacity-5 group-hover:opacity-70 group-hover:scale-105 transition duration-300"></div>
-                <div className=" card   sm:rounded-[36px] rounded-[28px] bg-gradient-to-b from-black/50 from-60% to-white border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center "></div>
+                <div className="sm:rounded-[36px] rounded-[28px] -inset-1 absolute bg-gradient-to-br from-indigo-500 blur-md backdrop-blur-md sm:opacity-10 opacity-5 group-hover:opacity-70 group-hover:scale-105 transition duration-300"></div>
+                <div className="card sm:rounded-[36px] rounded-[28px] bg-gradient-to-b from-black/50 from-60% to-white border-[0.5px] border-slate-500/50 backdrop-filter backdrop-blur-5xl drop-shadow-3xl flex place-content-center "></div>
                 <p className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-200/20 text-sm lg:text-lg">
                   Download CV
                 </p>
@@ -96,26 +92,15 @@ function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="md:ml-0 md:mt-12 lg:ml-[100px] md:place-content-center z-[-10] md:order-2 order-1 flex justify-center md:mb-32"
-        >
-          {" "}
-          <LazyLoadImage
-            src={profilepic}
-            alt="Profile"
-            effect="opacity"
-            placeholder={<ShimmerPlaceholder />}
-            className="w-[350px] lg:w-[450px] md:w-[350px] sm absolute z-[10] lg:-ml-[50px] md:-ml-5 -ml-10"
-          />
-          <img
-            src={circle}
-            className="z-[-1] lg:mt-[90px] md:mt-[58px] md:ml-[-2px] md:w-[300px] mt-[71px] ml-[-6px] lg:ml-[-6px] lg:w-[350px] w-[275px] animate-[spin_10s_linear_infinite]"
-            alt="Circle Decoration"
-          />
-        </motion.div>
+        {/* === KOLOM KANAN (LANYARD) === */}
+        {/* === KOLOM KANAN (LANYARD) === */}
+        {/* Wadah ini bertindak sebagai "bingkai" atau "topeng" */}
+        {/* Kolom kanan */}
+        <div className="relative hidden md:block overflow-visible w-screen left-1/2 right-1/2 -mx-[50vw]">
+          <div className="relative h-[80vh]">
+            <Lanyard position={[0, 0, 40]} />
+          </div>
+        </div>
       </div>
     </section>
   );
