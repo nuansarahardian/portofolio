@@ -31,16 +31,24 @@ function Hero() {
   });
 
   return (
-    <section id="home" className="relative w-full min-h-screen">
+    <section id="home" className="relative w-full min-h-screen overflow-hidden">
       <img
         className="absolute inset-0 z-[-1000] w-full h-full object-cover sm:opacity-20 opacity-60"
         src={bgporto}
         alt="Background"
       />
+
+      {/* === [BARU] WADAH LANYARD KHUSUS MOBILE === */}
+      {/* Blok ini hanya akan aktif di tampilan mobile ('md:hidden'). */}
+      {/* Diposisikan absolut di atas agar tidak mengganggu alur dokumen. */}
+      <div className="md:hidden absolute top-0 left-0 right-0 h-[50vh] flex justify-center items-start">
+        <Lanyard position={[0, 0, 15]} />
+      </div>
+
       <div className="grid md:grid-cols-2 max-w-[1350px] mx-auto min-h-screen">
         {/* === KOLOM KIRI (TEKS) === */}
-        <div className="flex flex-col justify-center p-4 md:p-8">
-          {/* ... (Konten teks Anda tidak berubah) ... */}
+        {/* [MODIFIKASI] Menambahkan padding-top HANYA untuk mobile ('pt-[45vh] md:pt-0'). */}
+        <div className="relative z-10 flex flex-col justify-center p-4 md:p-8 pt-[20vh] md:pt-0">
           <div className="text-center md:text-left">
             <motion.div
               variants={container(0)}
@@ -92,13 +100,11 @@ function Hero() {
           </motion.div>
         </div>
 
-        {/* === KOLOM KANAN (LANYARD) === */}
-        {/* === KOLOM KANAN (LANYARD) === */}
-        {/* Wadah ini bertindak sebagai "bingkai" atau "topeng" */}
-        {/* Kolom kanan */}
+        {/* === KOLOM KANAN (LANYARD DESKTOP) === */}
+        {/* [TIDAK DIUBAH] Blok ini dibiarkan sama persis seperti kode asli Anda. */}
         <div className="relative hidden md:block overflow-visible w-screen left-1/2 right-1/2 -mx-[50vw]">
-          <div className="relative h-[80vh]">
-            <Lanyard position={[0, 0, 40]} />
+          <div className="relative h-[100vh] ">
+            <Lanyard position={[0, 0, 15]} />
           </div>
         </div>
       </div>

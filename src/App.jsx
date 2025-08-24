@@ -53,7 +53,7 @@ export default function App() {
             </Helmet>
 
             <Router>
-              <Navbar />
+              <Navbar className="z-[999]" />
 
               <Routes>
                 <Route path="/" element={<Home />}></Route>

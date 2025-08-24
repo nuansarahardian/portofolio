@@ -26,7 +26,7 @@ extend({ MeshLineGeometry, MeshLineMaterial });
 
 export default function Lanyard({
   className = "",
-  position = [0, 0, 30],
+  position = [0, 0, 20],
   gravity = [0, -40, 0],
   fov = 20,
   transparent = true,
@@ -47,7 +47,7 @@ export default function Lanyard({
 
   return (
     <div
-      className={`relative z-10 w-full h-full flex justify-center items-start ${className}`}
+      className={`relative z-0 w-full h-full flex md:justify-end justify-center items-start ${className} md:justify-end justify-center md:pr-6`}
     >
       <Canvas
         dpr={[1, maxDpr]}
@@ -62,7 +62,7 @@ export default function Lanyard({
       >
         <ambientLight intensity={Math.PI} />
         <Physics gravity={gravity} timeStep={1 / 60}>
-          <Band />
+          <Band offset={[isPhone ? 1.5 : 4, 0, 0]} />
         </Physics>
 
         <Environment blur={0.75}>
@@ -141,9 +141,9 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   );
 
   // Joints
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 2.5]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 2.5]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 2.5]);
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 2.0]);
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 2.0]);
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 2.0]);
   useSphericalJoint(j3, card, [
     [0, 0, 0],
     [0, 1.5, 0],
